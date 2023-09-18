@@ -1,10 +1,14 @@
 import './App.css';
 import React from "react";
 import Hero from "./components/Hero";
-
+import Projects from "./components/Projects"
 function App() {
   return (
-    <Hero />
+    <div>
+      <Hero />
+      <Projects />
+    </div>
+    
   );
 }
 

@@ -4,7 +4,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Stack from '@mui/material/Stack';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-
 function Hero() {
     return ( 
         <div className='App-header'>
@@ -14,19 +13,19 @@ function Hero() {
             </h1>
             <h2>Welcome to my workshop! </h2>
             <Stack direction="row" spacing={1}>
-                <IconButton aria-label="mail" color = "primary" size = "large" href="mailto:jaimil.dalwadi@uwaterloo.ca" target="_blank">
+                <IconButton aria-label="mail" sx={{ color: '#0BECE5' }} size = "large" href="mailto:jaimil.dalwadi@uwaterloo.ca" target="_blank">
                     <EmailIcon />
                 </IconButton>
 
-                <IconButton aria-label="call" color = "primary" size = "large" href="tel:+16479820821" target="_blank">
+                <IconButton aria-label="call" sx={{ color: '#0BECE5' }} size = "large" href="tel:+16479820821" target="_blank">
                     <PhoneIcon />
                 </IconButton>
 
-                <IconButton aria-label="github" color = "primary" size = "large" href="https://github.com/theDe-bugger/" target="_blank">
+                <IconButton aria-label="github" sx={{ color: '#0BECE5' }} size = "large" href="https://github.com/theDe-bugger/" target="_blank">
                     <GitHubIcon />
                 </IconButton>
 
-                <IconButton aria-label="linkedin" color = "primary" size = "large" href="https://linkedin.com/in/jaimil-dalwadi" target="_blank">
+                <IconButton aria-label="linkedin" sx={{ color: '#0BECE5' }} size = "large" href="https://linkedin.com/in/jaimil-dalwadi" target="_blank">
                     <LinkedInIcon />
                 </IconButton>
                 
