@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card';
 import LinkIcon from '@mui/icons-material/Link';
 import "./css/Projects.css"
 import IconButton from '@mui/material/IconButton';
-import { Icon } from '@mui/material';
 
 function Projects() {
   const [index, setIndex] = useState(0);
