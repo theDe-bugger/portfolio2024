@@ -87,7 +87,7 @@ export default function Experience() {
                     Wat Street Engineering Design Team
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Created first quantitative finance design team at the University of Waterloo. We analyze + predict markets, and advise real-world clients.
+                    Created first quantitative finance design team at the University of Waterloo. We analyze + predict markets and advise real-world clients.
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Stack: Python, NumPy, Seaborn, Pandas, React.js, Express.js
