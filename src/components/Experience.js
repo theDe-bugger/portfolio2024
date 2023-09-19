@@ -40,7 +40,7 @@ export default function Experience() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn More</Button>
+                  <Button className="link" size="small" as="a" href="https://www.martinrea.com" target="_blank">Learn More</Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -67,7 +67,7 @@ export default function Experience() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn More</Button>
+                <Button className="link" size="small" as="a" href="https://www.finastra.com/" target="_blank">Learn More</Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -94,7 +94,7 @@ export default function Experience() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn More</Button>
+                  <Button className="link" size="small" as="a" href="https://www.linkedin.com/company/wat-street/" target="_blank">Learn More</Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -121,7 +121,7 @@ export default function Experience() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn More</Button>
+                  <Button className="link" size="small" as="a" href="https://www.speakfluent.ca/" target="_blank">Learn More</Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -148,7 +148,7 @@ export default function Experience() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn More</Button>
+                  <Button className="link" size="small" as="a" href="https://youthculture.com/" target="_blank">Learn More</Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -175,7 +175,7 @@ export default function Experience() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn More</Button>
+                  <Button className="link" size="small" as="a" href="https://www.wizkidlearning.com/" target="_blank">Learn More</Button>
                 </CardActions>
               </Card>
             </Grid>

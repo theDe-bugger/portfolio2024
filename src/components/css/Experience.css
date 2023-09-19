@@ -28,7 +28,7 @@
     outline-color: #0D8CA5;
     outline-width: 1px;
     outline-style: auto;
-    background-color: #15677A;
+    background-color: white;
     background-size:100%,100%;
     margin: auto;
     display: flex;
@@ -43,4 +43,8 @@
     outline-color: #15677A;
     outline-width: 1px;
     outline-style: auto;
+}
+
+.link {
+    color:#0D8CA5;
 }
