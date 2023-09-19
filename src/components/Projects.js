@@ -44,7 +44,7 @@ function Projects() {
                         <Card.Body>
                         <Card.Title>View Here <IconButton href="https://devpost.com/software/baymaxbot" target="_blank"><LinkIcon></LinkIcon></IconButton></Card.Title>                            
                         <Card.Text>
-                            Discord bot to detect suicidal ideation that can notify adminstrators and provide resources.
+                            Discord bot to detect suicidal ideation that can notify admins and provide resources.
                         </Card.Text>
                         <h6>Stack: Discord.js, Node.js, Git</h6>
                         </Card.Body>

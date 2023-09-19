@@ -2,13 +2,13 @@ import './App.css';
 import React from "react";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-// import About from "./components/About";
+import Experience from "./components/Experience";
 
 function App() {
   return (
     <div>
       <Hero />
-      {/* <About /> */}
+      <Experience />
       <Projects />
     </div>
     

@@ -11,8 +11,8 @@ function Hero() {
             <h1>
                 Hi there, I'm Jaimil Dalwadi     <span class="wave">👋🏼</span>
             </h1>
-            <h2>Welcome to my workshop! </h2>
-            <Stack direction="row" spacing={1}>
+            <h2>Scroll through to learn more about me! </h2>
+            <Stack direction="row" spacing={1} >
                 <IconButton aria-label="mail" sx={{ color: '#0BECE5' }} size = "large" href="mailto:jaimil.dalwadi@uwaterloo.ca" target="_blank">
                     <EmailIcon />
                 </IconButton>
