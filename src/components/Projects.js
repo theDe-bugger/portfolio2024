@@ -28,7 +28,7 @@ function Projects() {
                             <Card.Text>
                             Computer vision web-app that automatically sorts waste for you.
                             </Card.Text>
-                            <h6>Stack:  Microsoft Azure AI, HTML/CSS, JavaScript, Git</h6>
+                            <h6>Stack: Microsoft Azure AI, HTML/CSS, JavaScript, Git</h6>
                         </Card.Body>
                         </Card>
                     </div>
@@ -63,7 +63,7 @@ function Projects() {
                         <Card.Title>View Here <IconButton href="https://github.com/theDe-bugger/IEEE-quantum-hackathon" target="_blank"><LinkIcon></LinkIcon></IconButton></Card.Title>                            <Card.Text>
                             Used IBM Qiskit to solve NP-Hard travelling salesman problem with quantum computing.
                             </Card.Text>
-                            <h6>Stack:  Python, IBM Qiskit Runtime API, Jupyter Notebook, Git</h6>
+                            <h6>Stack: Python, IBM Qiskit Runtime API, Jupyter Notebook, Git</h6>
                         </Card.Body>
                         </Card>
                     </div>
@@ -79,26 +79,27 @@ function Projects() {
                         <Card.Title>View Here <IconButton href="https://devpost.com/software/mycalcount" target="_blank"><LinkIcon></LinkIcon></IconButton></Card.Title>                            <Card.Text>
                             Computer vision web-app to automatically count calories from pictures of food.
                             </Card.Text>
-                            <h6>Stack:  Google Cloud Vision API, HTML/CSS, JavaScript, Git</h6>
+                            <h6>Stack: Google Cloud Vision API, HTML/CSS, JavaScript, Git</h6>
                         </Card.Body>
                         </Card>
                     </div>
                 </Carousel.Item>
-                {/* <Carousel.Item interval={3000}>
+                <Carousel.Item interval={3000}>
                     <div >
                         
                         <Card className='Card'>
-                        <h4>MyCalCount</h4>
-                        <h6>RU Hacks 2021</h6>
-                        <Card.Img variant="top" src={process.env.PUBLIC_URL + "/img/mycalcount.png"} />
+                        <h4>Water Quality Analysis Using Particle-Accelerator</h4>
+                        <h6>Canadian Light Source Research + Seminar</h6>
+                        <Card.Img variant="top" src={process.env.PUBLIC_URL + "/img/sotb.png"} />
                         <Card.Body>
-                        <Card.Title>View Here <IconButton href="https://devpost.com/software/mycalcount" target="_blank"><LinkIcon></LinkIcon></IconButton></Card.Title>                            <Card.Text>
-                            Computer vision web-app to automatically count calories from pictures of food. Made using Google Cloud Vision, HTML/CSS, JavaScript.
+                        <Card.Title>View Here <IconButton href="https://www.youtube.com/watch?v=t7FBt7txZDc&ab_channel=CanadianLightSource" target="_blank"><LinkIcon></LinkIcon></IconButton></Card.Title>                            <Card.Text>
+                            Detected Iron, Zinc, and other metal anomolies in water samples from Lake Ontario.
                             </Card.Text>
+                            <h6>Skills: Data Collection + Analysis, R, Public Speaking</h6>
                         </Card.Body>
                         </Card>
                     </div>
-                </Carousel.Item> */}
+                </Carousel.Item>
             </Carousel>
         </div>
     
