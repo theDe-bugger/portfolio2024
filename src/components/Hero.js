@@ -17,7 +17,8 @@ function Hero() {
         startDelay: 300,
         typeSpeed: 50,
         backSpeed: 50,
-        backDelay: 2000
+        backDelay: 2000,
+        loop: True
         });
 
         // Destropying
