@@ -1,13 +1,22 @@
 .App {
   text-align: center;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  align-items: center; /* Center items vertically */
+}
 
 .App-header {
-  background-color: #192529;
+  background-color:	#0e1111;  
+  /* flex-direction: row; */
+}
+.App-info {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: right;
+  text-align: right;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -17,6 +26,29 @@
   color: #0BECE5;
 }
 
+
+.App-face {
+  width: 500px; /* Adjust size as needed */
+  height: 500px; /* Adjust size as needed */
+  border-radius: 10%; /* Make it a circle */
+  overflow: hidden; /* Clip the image to the circle shape */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  justify-content: left;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.App-face:hover {
+  transform: scale(1.1); /* Scale the image on hover */
+  box-shadow: 0 4px 8px #0BECE5; /* Add a stronger shadow on hover */
+}
+
+.App-face img {
+  width: 100%; /* Make the image fill the circle */
+  height: 100%; /* Make the image fill the circle */
+  object-fit: cover; /* Ensure the image covers the circle completely */
+}
 button {
   color: #0BECE5;
 }
