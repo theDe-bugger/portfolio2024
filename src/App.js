@@ -83,30 +83,6 @@ function App() {
               textTransform: "none",
             }}
           >
-            {/* <IconButton sx={{ p: 0 }}>
-            <Avatar
-              alt="Debugger Logo"
-              src={process.env.PUBLIC_URL + "logo.png"}
-            />
-          </IconButton> */}
-            {/* <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography> */}
-
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
