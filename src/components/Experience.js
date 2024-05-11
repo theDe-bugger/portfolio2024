@@ -1,4 +1,5 @@
-import * as React from "react";
+// import * as React from "react";
+import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -9,7 +10,7 @@ import { Text } from "react-ui";
 import LinkIcon from "@mui/icons-material/Link";
 import Chip from "@mui/material/Chip";
 import Button from "@mui/material/Button";
-
+import useWindowDimensions from "./useWindowDimensions";
 import "./css/Experience.css";
 
 function TabPanel(props) {
@@ -73,7 +74,10 @@ function a11yProps(index) {
 }
 
 export default function Experience() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const tabContentRef = useRef(null);
+  const [imageVisible, setImageVisible] = useState(true);
+  const { height, width } = useWindowDimensions();
 
   const Experiences = [
     {
@@ -101,9 +105,10 @@ export default function Experience() {
       description:
         "Built and deployed computer vision models on the production line for a car parts manufacturing company (TSE: MRE).",
       dates: "May 2023 - Aug. 2023",
+      link: "https://www.martinrea.com/",
       location: "Vaughan, ON",
       image: "/img/martinrea.jpeg",
-      skills: ["Python", "PyTorch", "OpenCV", "NumPy", "Django", "Docker"],
+      skills: ["Python", "PyTorch", "OpenCV", "Django", "Docker"],
       role: "Machine Learning Intern - Robotics Vision",
     },
     {
@@ -113,15 +118,9 @@ export default function Experience() {
       description:
         "Created first quantitative finance design team at the University of Waterloo. We analyze + predict markets and advise real-world clients.",
       location: "Waterloo, ON",
+      link: "https://www.linkedin.com/company/wat-street/",
       image: "/img/watstreet.jpeg",
-      skills: [
-        "Python",
-        "NumPy",
-        "Seaborn",
-        "Pandas",
-        "React.js",
-        "Express.js",
-      ],
+      skills: ["Python", "NumPy", "Seaborn", "Pandas", "React.js"],
       role: "President + Co-Founder, Lead Developer",
     },
     {
@@ -131,7 +130,9 @@ export default function Experience() {
         "Developed web-app and optimized services for Canada's top mortgage tool used by 20,000+ brokers.",
       dates: "May 2022 - Aug. 2022",
       image: "/img/finastra.webp",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:6971075190948601859?utm_source=share&utm_medium=member_desktop",
       location: "Toronto, ON",
+
       skills: [
         "JavaScript",
         "TypeScript",
@@ -149,6 +150,7 @@ export default function Experience() {
         "Created a demo web-app that uses Google Cloud Text-to-Speech to analyze and provide feedback on user speech.",
       dates: "June 2021 - Aug. 2021",
       image: "/img/speakfluent.jpeg",
+      link: "https://www.speakfluent.ca/",
       location: "Toronto, ON",
       skills: ["React.js (Next.js)", "Python (Flask)", "Google Cloud API"],
       role: "Full Stack Developer Intern",
@@ -161,6 +163,7 @@ export default function Experience() {
       dates: "June 2020 - Aug. 2021",
       image: "/img/youthculture.jpeg",
       location: "Brampton, ON",
+      link: "https://youthculture.com/",
       skills: ["WordPress", "HTML/CSS", "Git", "Figma"],
       role: "Technical Project Manager",
     },
@@ -171,6 +174,7 @@ export default function Experience() {
         "Taught multiple classes to kids aged 6-12 about topics such as web-development, game-development (Roblox), and more.",
       image: "/img/wizkid.png",
       dates: "Sept. 2021 - Dec. 2021",
+      link: "https://www.wizkidlearning.com/",
       location: "Waterloo, ON",
       skills: ["HTML/CSS", "JavaScript", "Roblox Studio"],
       role: "Coding Instructor",
@@ -183,6 +187,7 @@ export default function Experience() {
       image: "/img/npsshackclub.webp",
       dates: "June 2020 - June 2021",
       location: "Brampton, ON",
+      link: "https://www.instagram.com/npss.hackclub/",
       skills: ["Python", "React Native", "Leadership"],
       role: "Co-Founder + Co-President",
     },
@@ -190,6 +195,31 @@ export default function Experience() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  useEffect(() => {
+    const contentElement = tabContentRef.current;
+
+    // Function to check if content overflows
+    const checkOverflow = () => {
+      if (contentElement) {
+        const isOverflowing =
+          contentElement.scrollHeight > contentElement.clientHeight ||
+          contentElement.scrollWidth > contentElement.clientWidth;
+
+        // Set state to show/hide image based on overflow
+        setImageVisible(!isOverflowing);
+      }
+    };
+
+    // Check overflow initially and on window resize
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("resize", checkOverflow);
+    };
+  }, []);
 
   return (
     <div className="Experience">
@@ -226,6 +256,7 @@ export default function Experience() {
                 color: "#0BECE5",
                 backgroundColor: "inherit",
                 alignItems: "flex-start",
+                textTransform: "none",
                 maxHeight: "50vh",
                 maxWidth: "80vw",
                 "& button": { borderRadius: 2, fontSize: "20px" },
@@ -238,6 +269,7 @@ export default function Experience() {
                 "& .MuiTab-root": {
                   color: "#FFFBFC",
                   alignItems: "right",
+                  textTransform: "none",
                 },
               }}
               TabIndicatorProps={{
@@ -255,13 +287,21 @@ export default function Experience() {
               return (
                 <TabPanel
                   value={value}
+                  key="null"
                   index={index}
+                  ref={tabContentRef}
+                  scrollButtons={true}
                   sx={{
+                    p: "10px",
                     "& .MuiTabPanel-root": {
                       display: "flex",
                       alignItems: "center",
                       textAlign: "center",
+                      textTransform: "none",
                       //   flex: 1,
+                      p: "10px",
+                      overflow: "auto",
+                      overflowY: "auto",
                       maxWidth: "40vw",
                       color: "black",
                     },
@@ -269,24 +309,30 @@ export default function Experience() {
                       display: "flex",
                       alignItems: "center",
                       textAlign: "center",
+                      textTransform: "none",
+                      overflowY: "auto",
                       //   flex: 1,
+                      padding: "10px",
+                      overflow: "auto",
                       maxWidth: "30vw",
                       color: "black",
                     },
                   }}
                 >
-                  <div>
-                    <div className="Experience-tabImgWrap">
-                      <Avatar
-                        className="Experience-tabImg"
-                        src={process.env.PUBLIC_URL + exp.image}
-                        sx={{
-                          width: "120px",
-                          height: "120px",
-                          marginBottom: "10px",
-                        }}
-                      />
-                    </div>
+                  <div style={{ overflowY: "auto" }}>
+                    {width > 700 && height > 700 && (
+                      <div className="Experience-tabImgWrap">
+                        <Avatar
+                          className="Experience-tabImg"
+                          src={process.env.PUBLIC_URL + exp.image}
+                          sx={{
+                            width: "100px",
+                            height: "100px",
+                            marginBottom: "10px",
+                          }}
+                        />
+                      </div>
+                    )}
                     <h2>{exp.role} </h2>
                     <h6>
                       {exp.location} | {exp.dates}
@@ -299,20 +345,24 @@ export default function Experience() {
                         </>
                       );
                     })}
-                    <h6 marginTop="5px">{exp.description}</h6>
-                    <Button
-                      variant="contained"
-                      endIcon={<LinkIcon />}
-                      target="_blank"
-                      href="http://www.google.com/"
-                      sx={{
-                        backgroundColor: "#0D8CA5",
-                        "&:hover": { backgroundColor: "#0BECE5" },
-                        marginTop: "4px",
-                      }}
-                    >
-                      Check it out
-                    </Button>
+                    {width > 1000 && height > 750 && (
+                      <h6 marginTop="5px">{exp.description}</h6>
+                    )}
+                    {width > 875 && height > 600 && (
+                      <Button
+                        variant="contained"
+                        endIcon={<LinkIcon />}
+                        target="_blank"
+                        href={exp.link}
+                        sx={{
+                          backgroundColor: "#0D8CA5",
+                          "&:hover": { backgroundColor: "#0BECE5" },
+                          marginTop: "4px",
+                        }}
+                      >
+                        Check it out
+                      </Button>
+                    )}
                     {/* {exp.bullets.map((bullet) => {
                       return <h6>{bullet}</h6>;
                     })} */}

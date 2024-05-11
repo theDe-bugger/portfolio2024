@@ -8,9 +8,9 @@
   gap: 10px;
 }
 
-
 .App-header {
-  background-color:	#0e1111;  
+  background-color: #0e1111;
+  min-width: 100vw;
   /* flex-direction: row; */
 }
 .App-info {
@@ -21,17 +21,17 @@
   text-align: right;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #FFFBFC;
+  color: #fffbfc;
 }
 
 .App-link {
-  color: #0BECE5;
+  color: #0bece5;
 }
 
-
 .App-face {
-  width: 500px; /* Adjust size as needed */
-  height: 500px; /* Adjust size as needed */
+  width: 50%; /* Adjust size as needed */
+  height: 50%; /* Adjust size as needed */
+  object-fit: cover;
   border-radius: 10%; /* Make it a circle */
   overflow: hidden; /* Clip the image to the circle shape */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
@@ -43,7 +43,7 @@
 
 .App-face:hover {
   transform: scale(1.1); /* Scale the image on hover */
-  box-shadow: 0 4px 8px #0BECE5; /* Add a stronger shadow on hover */
+  box-shadow: 0 4px 8px #0bece5; /* Add a stronger shadow on hover */
 }
 
 .App-face img {
@@ -52,7 +52,7 @@
   object-fit: cover; /* Ensure the image covers the circle completely */
 }
 button {
-  color: #0BECE5;
+  color: #0bece5;
 }
 
 @keyframes App-logo-spin {
@@ -65,7 +65,7 @@ button {
 }
 
 .primary {
-  color: #0BECE5
+  color: #0bece5;
 }
 
 /* #F08080 */
