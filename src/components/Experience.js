@@ -1,5 +1,5 @@
 // import * as React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -76,7 +76,6 @@ function a11yProps(index) {
 export default function Experience() {
   const [value, setValue] = useState(0);
   const tabContentRef = useRef(null);
-  const [imageVisible, setImageVisible] = useState(true);
   const { height, width } = useWindowDimensions();
 
   const Experiences = [
@@ -195,31 +194,6 @@ export default function Experience() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  useEffect(() => {
-    const contentElement = tabContentRef.current;
-
-    // Function to check if content overflows
-    const checkOverflow = () => {
-      if (contentElement) {
-        const isOverflowing =
-          contentElement.scrollHeight > contentElement.clientHeight ||
-          contentElement.scrollWidth > contentElement.clientWidth;
-
-        // Set state to show/hide image based on overflow
-        setImageVisible(!isOverflowing);
-      }
-    };
-
-    // Check overflow initially and on window resize
-    checkOverflow();
-    window.addEventListener("resize", checkOverflow);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener("resize", checkOverflow);
-    };
-  }, []);
 
   return (
     <div className="Experience">
