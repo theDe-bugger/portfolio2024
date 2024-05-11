@@ -124,7 +124,7 @@ function App() {
                     <Typography
                       textAlign="center"
                       color={
-                        activeSection === page.page ? "#0bece5" : "#fffbfc"
+                        activeSection === page.page ? "#0bece5" : "#0e1111"
                       }
                     >
                       {page.page}
