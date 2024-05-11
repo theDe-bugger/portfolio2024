@@ -3,7 +3,6 @@ import { useRef, useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
-import Navbar from "./components/Navbar";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -15,7 +14,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import "./components/css/Navbar.css";
 
 function App() {
   const homeSection = useRef(null);
