@@ -5,9 +5,9 @@ import Stack from "@mui/material/Stack";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Typed from "typed.js";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, forwardRef } from "react";
 
-function Hero() {
+const Hero = forwardRef(function (props, ref) {
   const el = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -42,7 +42,7 @@ function Hero() {
   }, []);
 
   return (
-    <div>
+    <div ref={ref}>
       {isLoading ? (
         <div className="loading-screen">Loading...</div> // Show loading screen
       ) : (
@@ -119,6 +119,6 @@ function Hero() {
       )}
     </div>
   );
-}
+});
 
 export default Hero;

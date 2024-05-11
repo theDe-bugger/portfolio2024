@@ -1,5 +1,5 @@
 // import * as React from "react";
-import { useRef, useState } from "react";
+import { useRef, useState, forwardRef } from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -73,7 +73,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Experience() {
+const Experience = forwardRef(function (props, ref) {
   const [value, setValue] = useState(0);
   const tabContentRef = useRef(null);
   const { height, width } = useWindowDimensions();
@@ -196,10 +196,14 @@ export default function Experience() {
   };
 
   return (
-    <div className="Experience">
+    <div className="Experience" ref={ref}>
       <div className="Experience-header">
-        <Text size={60} color="snow">
+        {/* <Text size={60} color="snow">
           Experience
+        </Text>
+        <br></br> */}
+        <Text size={40} color="snow">
+          Some places I've worked at in the past...
         </Text>
       </div>
       <div>
@@ -349,4 +353,6 @@ export default function Experience() {
       </div>
     </div>
   );
-}
+});
+
+export default Experience;
