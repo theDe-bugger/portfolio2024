@@ -44,12 +44,15 @@ function App() {
     const rectProjects = projectsSection.current.getBoundingClientRect();
     if (rectHome.top < window.innerHeight - 80) {
       setActiveSection("Home");
+      // scrollHandler(homeSection.current);
     }
     if (rectExperience.top <= window.innerHeight - 80) {
       setActiveSection("Experience");
+      // scrollHandler(experienceSection.current);
     }
     if (rectProjects.top <= window.innerHeight - 80) {
       setActiveSection("Projects");
+      // scrollHandler(projectsSection.current);
     }
     // setIsInView(rect.top < window.innerHeight && rect.bottom >= 0);
   };
@@ -124,7 +127,7 @@ function App() {
                     <Typography
                       textAlign="center"
                       color={
-                        activeSection === page.page ? "#0bece5" : "#0e1111"
+                        activeSection === page.page ? "#06726e" : "#0e1111"
                       }
                     >
                       {page.page}
