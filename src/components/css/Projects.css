@@ -1,6 +1,5 @@
 .Projects {
   min-height: 92vh;
-  min-width: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
