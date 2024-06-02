@@ -139,7 +139,7 @@ function App() {
             <IconButton sx={{ p: 0 }} disabled>
               <Avatar
                 alt="Debugger Logo"
-                src={process.env.PUBLIC_URL + "logo.png"}
+                src={process.env.PUBLIC_URL + "logo.jpg"}
               />
             </IconButton>
 
