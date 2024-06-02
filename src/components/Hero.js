@@ -110,7 +110,7 @@ const Hero = forwardRef(function (props, ref) {
 
             <div className="App-face">
               <img
-                src={process.env.PUBLIC_URL + "/img/portrait.png"}
+                src={process.env.PUBLIC_URL + "/img/portrait.jpg"}
                 alt="Jaimil"
               />
             </div>
