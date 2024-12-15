@@ -11,15 +11,14 @@ export function Footer() {
           </p>
           <p className="text-muted-foreground text-sm max-w-xl">
             I&apos;m always happy to have a chat and discuss opportunities to
-            grow, make an impact, or collaborate on interesting projects! Check
-            out my{" "}
-            <Link
-              href="/resume.pdf"
-              target="_blank"
+            grow, make an impact, or collaborate on interesting projects! Feel
+            free to{" "}
+            <a
+              href="mailto:jaimil.dalwadi@uwaterloo.ca"
               className="text-primary hover:text-primary/80"
             >
-              resume <ExternalLinkIcon className="inline h-4 w-4" />
-            </Link>
+              reach out <ExternalLinkIcon className="inline h-4 w-4" />
+            </a>
           </p>
           <div className="flex gap-4">
             {/* <Button
