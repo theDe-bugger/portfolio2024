@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ExternalLinkIcon } from "lucide-react";
 
 export function Footer() {
