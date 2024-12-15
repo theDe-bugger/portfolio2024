@@ -19,6 +19,7 @@ import { Experiences } from "@/data/experiences/experiences";
 
 export function Experience() {
   // Sort experiences by date (latest first)
+  // @ts-ignore
   const sortByDate = (experiences: any[]) => {
     return [...experiences].sort((a, b) => {
       const dateA = new Date(a.dates.split(" - ")[0]);
@@ -74,7 +75,9 @@ export function Experience() {
 
   return (
     <div className="flex flex-col items-center gap-8">
-      <h2 className="text-3xl font-bold text-center">Places I've Worked</h2>
+      <h2 className="text-3xl font-bold text-center">
+        Places I&apos;ve Worked
+      </h2>
 
       <Tabs defaultValue="professional" className="w-full max-w-4xl">
         <TabsList className="grid w-full grid-cols-2 mb-4">
