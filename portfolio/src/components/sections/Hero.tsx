@@ -5,7 +5,6 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
   EnvelopeClosedIcon,
-  MobileIcon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,10 +41,11 @@ export function Hero() {
         <div className="flex flex-col items-center md:items-start justify-center space-y-6 pr-12 flex-1">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-bold flex items-center gap-4">
-              What's up <span className="animate-wave inline-block">👋🏼</span>
+              What&apos;s up{" "}
+              <span className="animate-wave inline-block">👋🏼</span>
             </h1>
             <h2 className="text-3xl md:text-5xl font-bold mt-4">
-              I'm <span className="text-[#0BECE5]">Jaimil Dalwadi</span>
+              I&apos;m <span className="text-[#0BECE5]">Jaimil Dalwadi</span>
             </h2>
             <div className="h-16 mt-4">
               <span ref={el} className="text-xl text-muted-foreground"></span>

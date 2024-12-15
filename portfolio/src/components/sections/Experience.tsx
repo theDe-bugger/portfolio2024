@@ -1,13 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
+import { Card, CardDescription, CardTitle } from "../ui/card";
 import {
   Dialog,
   DialogContent,
@@ -15,7 +8,6 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  DialogOverlay,
 } from "../ui/dialog";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
@@ -31,7 +23,7 @@ export function Experience() {
     return [...experiences].sort((a, b) => {
       const dateA = new Date(a.dates.split(" - ")[0]);
       const dateB = new Date(b.dates.split(" - ")[0]);
-      return dateB - dateA;
+      return dateB.getTime() - dateA.getTime();
     });
   };
 
@@ -132,15 +124,17 @@ export function Experience() {
                             {exp.description}
                           </p>
                           <div className="flex flex-wrap gap-1">
-                            {exp.skills.slice(0, 3).map((skill, i) => (
-                              <Badge
-                                key={i}
-                                variant="outline"
-                                className="border-[#0BECE5] text-[#0BECE5] text-xs"
-                              >
-                                {skill}
-                              </Badge>
-                            ))}
+                            {exp.skills
+                              .slice(0, 3)
+                              .map((skill: string, i: number) => (
+                                <Badge
+                                  key={i}
+                                  variant="outline"
+                                  className="border-[#0BECE5] text-[#0BECE5] text-xs"
+                                >
+                                  {skill}
+                                </Badge>
+                              ))}
                           </div>
                         </div>
                         <Button
@@ -170,13 +164,13 @@ export function Experience() {
                       </div>
                     </DialogHeader>
                     <div className="space-y-4">
-                      {exp.bullets.map((bullet, i) => (
+                      {exp.bullets.map((bullet: string, i: number) => (
                         <p key={i} className="text-sm">
                           {bullet}
                         </p>
                       ))}
                       <div className="flex flex-wrap gap-2">
-                        {exp.skills.map((skill, i) => (
+                        {exp.skills.map((skill: string, i: number) => (
                           <Badge
                             key={i}
                             variant="outline"
