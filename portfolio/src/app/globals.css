@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fffbfc;
+    --foreground: #0e1111;
+    --primary: #0bece5;
+
+    --card: #fffbfc;
+    --card-foreground: #0e1111;
+
+    --popover: #fffbfc;
+    --popover-foreground: #0e1111;
+
+    --border: #0e1111;
+    --input: #0e1111;
+
+    --primary-foreground: #0e1111;
+
+    --secondary: #f4f4f5;
+    --secondary-foreground: #0e1111;
+
+    --accent: #f4f4f5;
+    --accent-foreground: #0e1111;
+
+    --destructive: #ff0000;
+    --destructive-foreground: #fffbfc;
+
+    --ring: #0bece5;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #0e1111;
+    --foreground: #fffbfc;
+
+    --card: #0e1111;
+    --card-foreground: #fffbfc;
+
+    --popover: #0e1111;
+    --popover-foreground: #fffbfc;
+
+    --primary: #0bece5;
+    --primary-foreground: #0e1111;
+
+    --secondary: #27272a;
+    --secondary-foreground: #fffbfc;
+
+    --accent: #27272a;
+    --accent-foreground: #fffbfc;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #fffbfc;
+
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #0bece5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+}
