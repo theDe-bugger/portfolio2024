@@ -6,11 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
-import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { theme } = useTheme();
 
   useEffect(() => {
     // Reset interval whenever currentIndex changes
@@ -67,10 +66,12 @@ export function Projects() {
               <Card className="transition-all duration-500 border-primary/20 hover:border-primary">
                 <CardContent className="p-6 space-y-6">
                   <div className="relative h-64 rounded-lg overflow-hidden border border-primary/20">
-                    <img
+                    <Image
                       src={project.image}
                       alt={project.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 768px"
                     />
                   </div>
 

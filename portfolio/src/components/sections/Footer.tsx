@@ -1,4 +1,3 @@
-import { Button } from "../ui/button";
 import Link from "next/link";
 import { ExternalLinkIcon } from "lucide-react";
 
@@ -11,8 +10,9 @@ export function Footer() {
             Designed & Developed by Jaimil Dalwadi © 2024
           </p>
           <p className="text-muted-foreground text-sm max-w-xl">
-            I'm always happy to have a chat and discuss opportunities to grow,
-            make an impact, or collaborate on interesting projects! Check out my{" "}
+            I&apos;m always happy to have a chat and discuss opportunities to
+            grow, make an impact, or collaborate on interesting projects! Check
+            out my{" "}
             <Link
               href="/resume.pdf"
               target="_blank"
