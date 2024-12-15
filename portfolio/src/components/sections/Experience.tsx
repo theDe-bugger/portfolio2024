@@ -19,8 +19,8 @@ import { Experiences } from "@/data/experiences/experiences";
 
 export function Experience() {
   // Sort experiences by date (latest first)
-  // @ts-ignore
-  const sortByDate = (experiences: any[]) => {
+  // @ts-expect-error - Experiences array type is not yet defined in the codebase and needs proper typing
+  const sortByDate = (experiences: Experience[]) => {
     return [...experiences].sort((a, b) => {
       const dateA = new Date(a.dates.split(" - ")[0]);
       const dateB = new Date(b.dates.split(" - ")[0]);
