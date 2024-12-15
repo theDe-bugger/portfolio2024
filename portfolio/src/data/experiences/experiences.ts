@@ -7,11 +7,11 @@ export const Experiences = [
       "• Built a real-time analytics dashboard for the CEO (ex-FAANG Growth GM) to identify high-impact features, monitor user analytics, and visualize GCP costs company-wide using Remix, shadcn, Cloudflare, and Supabase.",
     ],
     description:
-      "Building full-stack features and testing infrastructure for an early-stage AI startup with ex-FAANG leadership.",
+      "Built full-stack features and testing infrastructure for an early-stage AI startup with ex-FAANG leadership. 15,000+ lines of production-ready code shipped within 3 months.",
     dates: "Sept. 2024 - Dec. 2024",
     location: "Bellevue, WA",
     image: "/img/storytellers.jpeg",
-    skills: ["Remix", "Playwright", "Flask", "Supabase"],
+    skills: ["TypeScript", "Remix", "Flask", "Playwright", "Supabase"],
     role: "Software Engineer Intern",
   },
   {
@@ -22,7 +22,7 @@ export const Experiences = [
       "• Reduced build times by 50% by optimizing Next.js bundle first load through tree-shaking, specific imports, and package analysis.",
     ],
     description:
-      "Integrated AWS, optimized back-end, built mobile + web app features for appreciation software for medical workers.",
+      "Integrated AWS Pinpoint, optimized deployments, built mobile + web app features for appreciation software for medical workers.",
     dates: "Jan. 2024 - Aug. 2024",
     location: "New York City, NY",
     image: "/img/wambi.jpeg",
@@ -37,11 +37,11 @@ export const Experiences = [
       "• Collaborated with DEVS, QA, IT, and plant operators to deploy ML models in the factory leveraging Linux System Services and Docker for fault-tolerant systems, raising production rates by 7%.",
     ],
     description:
-      "Built and deployed computer vision models on the production line for a car parts manufacturing company (TSE: MRE).",
+      "Built and deployed computer vision models on the production line for a car parts manufacturing company (TSE: MRE) saving $50,000+ annually in QA costs.",
     dates: "May 2023 - Aug. 2023",
     link: "https://www.martinrea.com/",
     location: "Vaughan, ON",
-    image: "/img/martinrea.jpeg",
+    image: "/img/martinrea.png",
     skills: ["Python", "PyTorch", "OpenCV", "Django", "Docker"],
     role: "Machine Learning Intern - Robotics Vision",
   },

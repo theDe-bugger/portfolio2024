@@ -9,6 +9,15 @@ export const Projects = [
     skills: ["Microsoft Azure AI", "HTML/CSS", "JavaScript", "Git"],
   },
   {
+    name: "Glassdoor Employer Review Predictor",
+    subtitle: "Top 10 of 200 in ML Kaggle Competition",
+    description:
+      "Built ML model to predict employee satisfaction from 500,000+ Glassdoor reviews.",
+    image: "/img/glassdoor.png",
+    link: "https://github.com/theDe-bugger/employee-review-predictor",
+    skills: ["Python", "Pandas", "Scikit-Learn", "NLTK", "Git"],
+  },
+  {
     name: "BaymaxBot",
     subtitle: "1st Place at JamHacks 2021",
     description:

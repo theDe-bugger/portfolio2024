@@ -46,27 +46,17 @@ export function Experience() {
     )
   );
 
-  // Logos that need white background
-  const logosNeedingBackground = ["martinrea.jpeg", "finastra.webp"];
-
   const LogoContainer = ({ image, name }: { image: string; name: string }) => {
-    const needsBackground = logosNeedingBackground.some((logo) =>
-      image.includes(logo)
-    );
-
     return (
       <div className="shrink-0">
-        <div
-          className={`h-12 w-12 rounded-lg border border-[#0BECE5]/20 overflow-hidden flex items-center justify-center bg-white`}
-        >
+        <div className="h-12 w-12 rounded-lg border border-primary/20 overflow-hidden flex items-center justify-center bg-white">
           <Image
             src={image}
             alt={name.split("@")[1]?.trim() || name}
             width={40}
             height={40}
-            className={`${
-              needsBackground ? "object-contain p-1" : "object-cover"
-            }`}
+            className="object-cover"
+            priority={true}
           />
         </div>
       </div>
@@ -81,23 +71,13 @@ export function Experience() {
 
       <Tabs defaultValue="professional" className="w-full max-w-4xl">
         <TabsList className="grid w-full grid-cols-2 mb-4">
-          <TabsTrigger
-            value="professional"
-            className="data-[state=active]:bg-[#0BECE5] data-[state=active]:text-[#0E1111] data-[state=active]:font-semibold"
-          >
-            Professional
-          </TabsTrigger>
-          <TabsTrigger
-            value="leadership"
-            className="data-[state=active]:bg-[#0BECE5] data-[state=active]:text-[#0E1111] data-[state=active]:font-semibold"
-          >
-            Leadership
-          </TabsTrigger>
+          <TabsTrigger value="professional">Professional</TabsTrigger>
+          <TabsTrigger value="leadership">Leadership</TabsTrigger>
         </TabsList>
 
         <TabsContent value="professional">
           <ScrollArea
-            className="h-[70vh] w-full rounded-md border border-[#0BECE5]/20"
+            className="h-[70vh] w-full rounded-md border border-primary/20"
             style={
               {
                 "--scrollbar-size": "8px",
@@ -108,17 +88,20 @@ export function Experience() {
               {professionalRoles.map((exp, index) => (
                 <Dialog key={index}>
                   <DialogTrigger asChild>
-                    <Card className="flex justify-between items-start p-4 hover:border-[#0BECE5] transition-colors cursor-pointer">
+                    <Card className="flex justify-between items-start p-4 hover:border-primary transition-colors cursor-pointer">
                       <div className="flex gap-4 flex-grow">
                         <LogoContainer image={exp.image} name={exp.name} />
                         <div className="space-y-2 min-w-0">
                           <div>
-                            <CardTitle className="text-[#FFFBFC] text-lg">
-                              {exp.role}
+                            <CardTitle className="text-foreground text-lg">
+                              <span className="text-foreground">
+                                {exp.role}
+                                <span className="text-primary">
+                                  {" "}
+                                  @ {exp.name.split("@")[1]?.trim() || exp.name}
+                                </span>
+                              </span>
                             </CardTitle>
-                            <CardDescription className="text-[#0BECE5] text-sm font-medium">
-                              {exp.name.split("@")[1]?.trim() || exp.name}
-                            </CardDescription>
                             <CardDescription className="text-muted-foreground text-xs">
                               {exp.location} | {exp.dates}
                             </CardDescription>
@@ -128,12 +111,12 @@ export function Experience() {
                           </p>
                           <div className="flex flex-wrap gap-1">
                             {exp.skills
-                              .slice(0, 3)
+                              .slice(0, 5)
                               .map((skill: string, i: number) => (
                                 <Badge
                                   key={i}
                                   variant="outline"
-                                  className="border-[#0BECE5] text-[#0BECE5] text-xs"
+                                  className="border-primary text-primary text-xs"
                                 >
                                   {skill}
                                 </Badge>
@@ -143,7 +126,7 @@ export function Experience() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-[#0BECE5] text-[#0BECE5] hover:bg-[#0BECE5] hover:text-[#0E1111] ml-4 shrink-0"
+                          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground ml-4 shrink-0"
                         >
                           <ExternalLinkIcon className="h-4 w-4 mr-2" />
                           Details
@@ -151,12 +134,12 @@ export function Experience() {
                       </div>
                     </Card>
                   </DialogTrigger>
-                  <DialogContent className="bg-[#0E1111] text-[#FFFBFC]">
+                  <DialogContent>
                     <DialogHeader>
                       <div className="flex items-center gap-4">
                         <LogoContainer image={exp.image} name={exp.name} />
                         <div>
-                          <DialogTitle className="text-[#0BECE5]">
+                          <DialogTitle className="text-primary">
                             {exp.role}
                           </DialogTitle>
                           <DialogDescription>
@@ -177,7 +160,7 @@ export function Experience() {
                           <Badge
                             key={i}
                             variant="outline"
-                            className="border-[#0BECE5] text-[#0BECE5]"
+                            className="border-primary text-primary"
                           >
                             {skill}
                           </Badge>
@@ -186,7 +169,7 @@ export function Experience() {
                       {exp.link && (
                         <Button
                           variant="outline"
-                          className="border-[#0BECE5] text-[#0BECE5] hover:bg-[#0BECE5] hover:text-[#0E1111]"
+                          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                           onClick={() => window.open(exp.link, "_blank")}
                         >
                           Visit Website
@@ -202,7 +185,7 @@ export function Experience() {
 
         <TabsContent value="leadership">
           <ScrollArea
-            className="h-[70vh] w-full rounded-md border border-[#0BECE5]/20"
+            className="h-[70vh] w-full rounded-md border border-primary/20"
             style={
               {
                 "--scrollbar-size": "8px",
@@ -213,19 +196,22 @@ export function Experience() {
               {leadershipRoles.map((exp, index) => (
                 <Card
                   key={index}
-                  className="p-4 hover:border-[#0BECE5] transition-colors"
+                  className="p-4 hover:border-primary transition-colors"
                 >
                   <div className="flex justify-between items-start">
                     <div className="flex gap-4">
                       <LogoContainer image={exp.image} name={exp.name} />
                       <div className="space-y-2">
                         <div>
-                          <CardTitle className="text-[#FFFBFC] text-lg">
-                            {exp.role}
+                          <CardTitle className="text-foreground text-lg">
+                            <span className="text-foreground">
+                              {exp.role}
+                              <span className="text-primary">
+                                {" "}
+                                @ {exp.name.split("@")[1]?.trim() || exp.name}
+                              </span>
+                            </span>
                           </CardTitle>
-                          <CardDescription className="text-[#0BECE5] text-sm font-medium">
-                            {exp.name.split("@")[1]?.trim() || exp.name}
-                          </CardDescription>
                           <CardDescription className="text-muted-foreground text-xs">
                             {exp.location} | {exp.dates}
                           </CardDescription>
@@ -239,7 +225,7 @@ export function Experience() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-[#0BECE5] text-[#0BECE5] hover:bg-[#0BECE5] hover:text-[#0E1111] ml-4 shrink-0"
+                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground ml-4 shrink-0"
                         onClick={() => window.open(exp.link, "_blank")}
                       >
                         <ExternalLinkIcon className="h-4 w-4 mr-2" />

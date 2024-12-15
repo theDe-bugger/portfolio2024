@@ -2,59 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
-    --background: #fffbfc;
+    --background: #ffffff;
     --foreground: #0e1111;
-    --primary: #0bece5;
-
-    --card: #fffbfc;
+    --card: #ffffff;
     --card-foreground: #0e1111;
-
-    --popover: #fffbfc;
+    --popover: #ffffff;
     --popover-foreground: #0e1111;
-
-    --border: #0e1111;
-    --input: #0e1111;
-
+    --primary: #0ba29d;
     --primary-foreground: #0e1111;
-
     --secondary: #f4f4f5;
     --secondary-foreground: #0e1111;
-
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
     --accent: #f4f4f5;
     --accent-foreground: #0e1111;
-
     --destructive: #ff0000;
-    --destructive-foreground: #fffbfc;
-
-    --ring: #0bece5;
-
+    --destructive-foreground: #ffffff;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #0ba29d;
     --radius: 0.5rem;
   }
 
   .dark {
     --background: #0e1111;
     --foreground: #fffbfc;
-
     --card: #0e1111;
     --card-foreground: #fffbfc;
-
     --popover: #0e1111;
     --popover-foreground: #fffbfc;
-
     --primary: #0bece5;
     --primary-foreground: #0e1111;
-
     --secondary: #27272a;
     --secondary-foreground: #fffbfc;
-
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
     --accent: #27272a;
     --accent-foreground: #fffbfc;
-
     --destructive: #7f1d1d;
     --destructive-foreground: #fffbfc;
-
     --border: #27272a;
     --input: #27272a;
     --ring: #0bece5;

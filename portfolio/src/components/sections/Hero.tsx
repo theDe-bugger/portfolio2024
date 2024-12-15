@@ -102,10 +102,11 @@ export function Hero() {
           <div className="relative w-full h-[500px]">
             <div className="relative rounded-2xl overflow-hidden border-2 border-[#0BECE5]/30 hover:border-[#0BECE5]/50 transition-all duration-300 h-full">
               <Image
-                src="/img/portrait.jpg"
+                src="/img/portrait_new.jpg"
                 alt="Jaimil Dalwadi"
                 fill
                 className="object-cover object-center scale-120 hover:scale-135 transition-transform duration-300"
+                priority={true}
               />
             </div>
           </div>
