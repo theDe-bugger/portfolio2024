@@ -4,7 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/sections/Footer";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
+console.log(process.env.NEXT_PUBLIC_GA_ID);
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -15,6 +16,8 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+const ANALYTICS_ID = process.env.NEXT_PUBLIC_GA_ID as string;
 
 export const metadata: Metadata = {
   title: "Jaimil Dalwadi",
@@ -47,6 +50,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId={ANALYTICS_ID} />
     </html>
   );
 }
