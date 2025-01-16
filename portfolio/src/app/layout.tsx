@@ -5,7 +5,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/sections/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
-console.log(process.env.NEXT_PUBLIC_GA_ID);
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
