@@ -2,7 +2,7 @@ export const Experiences = [
   {
     name: "Incoming SWE Intern @ Bloomberg",
     bullets: [
-      "• Will be applying machine learning to financial data. More details to come later this year!",
+      "• Will build, train, and deploy machine learning models to work with financial data. More details to come later this year!",
     ],
     description:
       "Will be applying machine learning to financial data. More details to come later this year!",
