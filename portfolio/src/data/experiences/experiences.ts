@@ -5,7 +5,7 @@ export const Experiences = [
       "• Will build, train, and deploy machine learning models to work with financial data. More details to come later this year!",
     ],
     description:
-      "Will be applying machine learning to financial data. More details to come later this year!",
+      "Will be applying machine learning to financial data. More details to come later this year!      ",
     dates: "May 2025 - Aug. 2025",
     location: "New York City, NY",
     image: "/img/bloomberg.jpg",
