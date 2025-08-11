@@ -1,11 +1,13 @@
 export const Experiences = [
   {
-    name: "Incoming SWE Intern @ Bloomberg",
+    name: "SWE (ML) Intern @ Bloomberg",
     bullets: [
-      "• Will build, train, and deploy machine learning models to work with financial data. More details to come later this year!",
+      "•	Cut mean squared error from 2% to 0.0002% for an ML model (multi-output regressor) used to predict key risk rates by refining feature distributions in synthetic data to better track market dynamics ($1.6T AUM fixed-income ETF sector) using PyTorch, scikit-learn, NumPy.",
+      "•	Deployed and productionized the ML model for daily re-training and active use by 20+ fixed income quants via internal pipelines in Bloomberg Terminal and OCaml services, achieving ~56% faster inference vs. legacy models.",
+      "•	Built real-time error monitoring dashboards in Grafana to track model performance and send automated alerts to senior engineers, cutting anomaly detection time from hours to minutes.",
     ],
     description:
-      "Will be applying machine learning to financial data. More details to come later this year!      ",
+      "Cut MSE from 2% to 0.0002% for an ML model predicting key risk rates in the $1.6T fixed-income ETF sector, deployed for daily use by 20+ quants.",
     dates: "May 2025 - Aug. 2025",
     location: "New York City, NY",
     image: "/img/bloomberg.jpg",
